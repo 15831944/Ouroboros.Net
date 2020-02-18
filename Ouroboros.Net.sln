@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ouroboros.Component.Aop", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ouroboros.Component.Jwt", "src\Ouroboros.Component.Jwt\Ouroboros.Component.Jwt.csproj", "{12D75EFD-1425-4132-8695-BF916CEC1BED}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ouroboros.Models", "src\Ouroboros.Models\Ouroboros.Models.csproj", "{BCE2D8A0-06FB-4931-AECB-2EAB53662C99}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{12D75EFD-1425-4132-8695-BF916CEC1BED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{12D75EFD-1425-4132-8695-BF916CEC1BED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{12D75EFD-1425-4132-8695-BF916CEC1BED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCE2D8A0-06FB-4931-AECB-2EAB53662C99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCE2D8A0-06FB-4931-AECB-2EAB53662C99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCE2D8A0-06FB-4931-AECB-2EAB53662C99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCE2D8A0-06FB-4931-AECB-2EAB53662C99}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
