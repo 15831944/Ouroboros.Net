@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ouroboros.DbContexts", "src
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ouroboros.Component.Aop", "src\Ouroboros.Component.Aop\Ouroboros.Component.Aop.csproj", "{9491C760-2A4F-4DEF-ADEA-CC1DF2443519}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ouroboros.Component.Jwt", "src\Ouroboros.Component.Jwt\Ouroboros.Component.Jwt.csproj", "{12D75EFD-1425-4132-8695-BF916CEC1BED}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{9491C760-2A4F-4DEF-ADEA-CC1DF2443519}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9491C760-2A4F-4DEF-ADEA-CC1DF2443519}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9491C760-2A4F-4DEF-ADEA-CC1DF2443519}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12D75EFD-1425-4132-8695-BF916CEC1BED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12D75EFD-1425-4132-8695-BF916CEC1BED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12D75EFD-1425-4132-8695-BF916CEC1BED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12D75EFD-1425-4132-8695-BF916CEC1BED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
