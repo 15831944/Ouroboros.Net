@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.29806.167
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ouroboros.Common", "src\Ouroboros.Common\Ouroboros.Common.csproj", "{F39F499D-5C68-4951-BA28-8149BA4B7F4D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ouroboros.Entities", "Ouroboros.Entities\Ouroboros.Entities.csproj", "{EB4BD622-DF30-46F1-8D05-EEACCBACD328}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ouroboros.Entities", "src\Ouroboros.Entities\Ouroboros.Entities.csproj", "{C345B6EF-684F-41EC-AE74-6BF75896ECA5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{F39F499D-5C68-4951-BA28-8149BA4B7F4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F39F499D-5C68-4951-BA28-8149BA4B7F4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F39F499D-5C68-4951-BA28-8149BA4B7F4D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EB4BD622-DF30-46F1-8D05-EEACCBACD328}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EB4BD622-DF30-46F1-8D05-EEACCBACD328}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EB4BD622-DF30-46F1-8D05-EEACCBACD328}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EB4BD622-DF30-46F1-8D05-EEACCBACD328}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C345B6EF-684F-41EC-AE74-6BF75896ECA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C345B6EF-684F-41EC-AE74-6BF75896ECA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C345B6EF-684F-41EC-AE74-6BF75896ECA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C345B6EF-684F-41EC-AE74-6BF75896ECA5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
