@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ouroboros.WebCore", "src\Ou
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ouroboros.UnitOfWork", "src\Ouroboros.UnitOfWork\Ouroboros.UnitOfWork.csproj", "{ED489B8D-ADE3-43D5-801E-1BF774CDAE04}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ouroboros.DbContexts", "src\Ouroboros.DbContexts\Ouroboros.DbContexts.csproj", "{D20A2D5E-DEF6-4D8A-804B-C0DB29A241E5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{ED489B8D-ADE3-43D5-801E-1BF774CDAE04}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ED489B8D-ADE3-43D5-801E-1BF774CDAE04}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ED489B8D-ADE3-43D5-801E-1BF774CDAE04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D20A2D5E-DEF6-4D8A-804B-C0DB29A241E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D20A2D5E-DEF6-4D8A-804B-C0DB29A241E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D20A2D5E-DEF6-4D8A-804B-C0DB29A241E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D20A2D5E-DEF6-4D8A-804B-C0DB29A241E5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
