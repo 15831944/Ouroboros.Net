@@ -4,5 +4,10 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Ouroboros.Component.Aop\Ouroboros.Component.Aop.csproj" />
+    <ProjectReference Include="..\Ouroboros.Services\Ouroboros.Services.csproj" />
+  </ItemGroup>
+
 
 </Project>

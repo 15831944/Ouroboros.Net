@@ -4,4 +4,9 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Ouroboros.Component.Jwt\Ouroboros.Component.Jwt.csproj" />
+    <ProjectReference Include="..\Ouroboros.DbContexts\Ouroboros.DbContexts.csproj" />
+  </ItemGroup>
+
 </Project>

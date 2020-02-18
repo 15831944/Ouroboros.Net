@@ -4,4 +4,9 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Ouroboros.Entities\Ouroboros.Entities.csproj" />
+    <ProjectReference Include="..\Ouroboros.WebCore\Ouroboros.WebCore.csproj" />
+  </ItemGroup>
+
 </Project>
