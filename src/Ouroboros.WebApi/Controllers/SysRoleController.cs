@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Ouroboros.Models.Core;
 using Ouroboros.Models.ViewModel;
+using Ouroboros.Services;
 
 namespace Ouroboros.WebApi.Controllers
 {
@@ -13,10 +14,17 @@ namespace Ouroboros.WebApi.Controllers
     [ApiController]
     public class SysRoleController : ControllerBase
     {
+        private readonly ISysRoleService _sysRoleService;
+
+        public SysRoleController(ISysRoleService roleService)
+        {
+            _sysRoleService = roleService;
+        }
+
         [HttpPost]
         public async Task<ExecuteResult> Post(SysRoleViewModel viewModel)
         {
-            return new ExecuteResult();
+            return await _sysRoleService.Create(viewModel);
         }
     }
 }
