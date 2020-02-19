@@ -9,6 +9,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Ouroboros.DbContexts;
 using Ouroboros.UnitOfWork;
+using Ouroboros.WebCore.Logger;
 
 namespace Ouroboros.WebApi
 {
@@ -21,6 +22,10 @@ namespace Ouroboros.WebApi
                 var host = CreateHostBuilder(args).Build();
                 using (IServiceScope scope = host.Services.CreateScope())
                 {
+                    //添加以上using引用
+                    //确保NLog.config中连接字符串与appsettings.json中同步
+                    NLogExtensions.EnsureNlogConfig("NLog.config", "MySQL", scope.ServiceProvider.GetRequiredService<IConfiguration>().GetSection("ConectionStrings:MSDbContext").Value);
+                    
                     //初始化数据库
                     DBSeed.Initialize(scope.ServiceProvider.GetRequiredService<IUnitOfWork<MSDbContext>>());
                 }
@@ -37,6 +42,6 @@ namespace Ouroboros.WebApi
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
-                });
+                }).AddNlogService();
     }
 }
