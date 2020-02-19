@@ -12,6 +12,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Ouroboros.DbContexts;
+using Ouroboros.Models.Automapper;
 using Ouroboros.UnitOfWork;
 using Ouroboros.WebCore;
 
@@ -39,6 +40,9 @@ namespace Ouroboros.WebApi
             
             //注册工作单元
             services.AddUnitOfWorkService<MSDbContext>(options => { options.UseMySql(Configuration.GetSection("ConectionStrings:MSDbContext").Value); });
+
+            //注册automapper服务
+            services.AddAutomapperService();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
