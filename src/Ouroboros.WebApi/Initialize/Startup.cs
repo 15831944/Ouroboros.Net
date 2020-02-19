@@ -13,6 +13,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Ouroboros.DbContexts;
 using Ouroboros.Models.Automapper;
+using Ouroboros.Services;
 using Ouroboros.UnitOfWork;
 using Ouroboros.WebCore;
 
@@ -43,6 +44,11 @@ namespace Ouroboros.WebApi
 
             //注册automapper服务
             services.AddAutomapperService();
+
+            //注册IBaseService和IRoleService接口及对应的实现类
+            services.AddScoped<IBaseService, BaseService>();
+            services.AddScoped<ISysRoleService, SysRoleService>();
+      
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
