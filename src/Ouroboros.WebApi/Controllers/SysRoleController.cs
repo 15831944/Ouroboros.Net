@@ -26,5 +26,18 @@ namespace Ouroboros.WebApi.Controllers
         {
             return await _sysRoleService.Create(viewModel);
         }
+
+        [HttpPut]
+        public async Task<ExecuteResult> Put(SysRoleViewModel viewModel)
+        {
+            return await _sysRoleService.Update(viewModel);
+        }
+
+        [HttpDelete]
+        public async Task<ExecuteResult> Delete(long id)
+        {
+            return await _sysRoleService.Delete(new SysRoleViewModel { Id = id });
+        }
+
     }
 }

@@ -41,14 +41,40 @@ namespace Ouroboros.Services
             return result;
         }
 
-        public Task<ExecuteResult> Delete(SysRoleViewModel viewModel)
+        public async Task<ExecuteResult> Delete(SysRoleViewModel viewModel)
         {
-            throw new NotImplementedException();
+            ExecuteResult result = new ExecuteResult();
+            //检查字段
+            if (viewModel.CheckField(ExecuteType.Delete, _unitOfWork) is ExecuteResult checkResult && !checkResult.IsSucceed)
+            {
+                return checkResult;
+            }
+            _unitOfWork.GetRepository<SysRole>().Delete(viewModel.Id);
+            await _unitOfWork.SaveChangesAsync();//提交
+            return result;
         }
 
-        public Task<ExecuteResult> Update(SysRoleViewModel viewModel)
+        public async Task<ExecuteResult> Update(SysRoleViewModel viewModel)
         {
-            throw new NotImplementedException();
+            ExecuteResult result = new ExecuteResult();
+            //检查字段
+            if (viewModel.CheckField(ExecuteType.Update, _unitOfWork) is ExecuteResult checkResult && !checkResult.IsSucceed)
+            {
+                return checkResult;
+            }
+
+            //从数据库中取出该记录
+            var row = await _unitOfWork.GetRepository<SysRole>().FindAsync(viewModel.Id);//在viewModel.CheckField中已经获取了一次用于检查，所以此处不会重复再从数据库取一次，有缓存
+            //修改对应的值
+            row.Name = viewModel.Name;
+            row.DisplayName = viewModel.DisplayName;
+            row.Remark = viewModel.Remark;
+            row.Modifier = 1219490056771866624;//由于暂时还没有做登录，所以拿不到登录者信息，先随便写一个后面再完善
+            row.ModifyTime = DateTime.Now;
+            _unitOfWork.GetRepository<SysRole>().Update(row);
+            await _unitOfWork.SaveChangesAsync();//提交
+
+            return result;
         }
     }
 }
