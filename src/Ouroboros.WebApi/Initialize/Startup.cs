@@ -53,6 +53,9 @@ namespace Ouroboros.WebApi
 
             app.UseRouting();
 
+            //开启跨域中间件
+            app.UseCors(WebCoreExtensions.MyAllowSpecificOrigins);
+
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
