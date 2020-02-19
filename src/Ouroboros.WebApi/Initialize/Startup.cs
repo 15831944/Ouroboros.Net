@@ -13,6 +13,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Ouroboros.DbContexts;
 using Ouroboros.UnitOfWork;
+using Ouroboros.WebCore;
 
 namespace Ouroboros.WebApi
 {
@@ -29,6 +30,13 @@ namespace Ouroboros.WebApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
+            //注册跨域策略
+            services.AddCorsPolicy(Configuration);
+
+            //注册webcore服务（网站主要配置）
+            services.AddWebCoreService(Configuration);
+            
             //注册工作单元
             services.AddUnitOfWorkService<MSDbContext>(options => { options.UseMySql(Configuration.GetSection("ConectionStrings:MSDbContext").Value); });
         }
