@@ -4,6 +4,9 @@ using System.Text;
 
 namespace Ouroboros.WebCore
 {
+    /// <summary>
+    /// SiteSetting网站配置实体类
+    /// </summary>
     public class SiteSetting
     {
         /// <summary>
