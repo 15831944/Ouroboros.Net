@@ -6,10 +6,13 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Ouroboros.DbContexts;
+using Ouroboros.UnitOfWork;
 
 namespace Ouroboros.WebApi
 {
@@ -26,6 +29,8 @@ namespace Ouroboros.WebApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            //注册工作单元
+            services.AddUnitOfWorkService<MSDbContext>(options => { options.UseMySql(Configuration.GetSection("ConectionStrings:MSDbContext").Value); });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
