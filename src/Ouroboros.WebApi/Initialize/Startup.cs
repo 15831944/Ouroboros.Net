@@ -12,6 +12,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Ouroboros.Component.Aop;
 using Ouroboros.DbContexts;
 using Ouroboros.Models.Automapper;
 using Ouroboros.Services;
@@ -46,9 +47,9 @@ namespace Ouroboros.WebApi
         /// <param name="builder"></param>
         public void ConfigureContainer(ContainerBuilder builder)
         {
-            //注册IBaseService和IRoleService接口及对应的实现类
-            builder.RegisterType<BaseService>().As<IBaseService>().InstancePerLifetimeScope();
-            builder.RegisterType<SysRoleService>().As<ISysRoleService>().InstancePerLifetimeScope();
+            //注册aop拦截器 
+            //将业务层程序集名称传了进去，给业务层接口和实现做了注册，也给业务层各方法开启了代理
+            builder.AddAopService(ServiceExtensions.GetAssemblyName());
         }
 
         public IConfiguration Configuration { get; }
